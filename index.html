@@ -162,6 +162,7 @@ h2.section-title em{font-style:normal;color:var(--gold);}
 .featured-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);margin-bottom:36px;background:var(--border);}
 .fp-card{position:relative;overflow:hidden;background:var(--bg2);padding:32px;display:flex;flex-direction:column;justify-content:space-between;transition:background .4s;}
 .fp-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(200,169,110,.09),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none;}
+.fp-card:last-child{grid-column:span 2;}
 .fp-card:hover{background:#151517;}
 .fp-card:hover::before{opacity:1;}
 .fp-badge{display:inline-flex;align-items:center;gap:6px;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;border:1px solid rgba(200,169,110,.3);border-radius:100px;padding:4px 12px;color:var(--gold);margin-bottom:18px;width:fit-content;}
@@ -255,6 +256,7 @@ body.rtl .contact-link-item:hover{padding-left:0;padding-right:8px;}
 }
 @media(max-width:850px){
   .about-grid,.contact-grid,.featured-projects,.other-list{grid-template-columns:1fr;}
+  .fp-card:last-child{grid-column:auto;}
   .projects-intro{flex-direction:column;align-items:flex-start;}
   .exp-item{grid-template-columns:1fr;gap:10px;}
   .hero-top{flex-direction:column;align-items:flex-start;}
@@ -384,7 +386,7 @@ body.rtl .contact-link-item:hover{padding-left:0;padding-right:8px;}
       </div>
       <div class="about-stats">
         <div class="stat"><div class="stat-num">5+</div><div class="stat-label" data-en="Live Web Projects" data-ur="لائیو ویب پروجیکٹس">Live Web Projects</div></div>
-        <div class="stat"><div class="stat-num">8</div><div class="stat-label" data-en="Featured Works" data-ur="منتخب کام">Featured Works</div></div>
+        <div class="stat"><div class="stat-num">7</div><div class="stat-label" data-en="Featured Works" data-ur="منتخب کام">Featured Works</div></div>
         <div class="stat"><div class="stat-num">1</div><div class="stat-label" data-en="Enterprise IS Internship" data-ur="انٹرپرائز انٹرنشپ">Enterprise IS Internship</div></div>
         <div class="stat"><div class="stat-num">2026</div><div class="stat-label" data-en="BS SE Graduate" data-ur="بی ایس گریجویٹ">BS SE Graduate</div></div>
       </div>
@@ -511,51 +513,10 @@ body.rtl .contact-link-item:hover{padding-left:0;padding-right:8px;}
       </div>
       <div class="fp-footer">
         <div class="fp-tags"><span class="fp-tag">Base44</span><span class="fp-tag">E-Commerce</span></div>
-        <a href="https://github.com/Ammad1818" target="_blank" rel="noopener noreferrer" class="fp-link" title="View Project" aria-label="View project on GitHub">↗</a>
+        <a href="https://nk-sport-karachi.base44.app" target="_blank" rel="noopener noreferrer" class="fp-link" title="Live Site" aria-label="Open NK Sport Karachi live site">↗</a>
       </div>
     </div>
 
-    <div class="fp-card project-item" data-cat="web" onmousemove="cardGlow(this,event)">
-      <div>
-        <div class="fp-badge" data-en="AI Creative" data-ur="AI برانڈنگ">AI Creative</div>
-        <div class="fp-num">06</div>
-        <h3 class="fp-title" data-en="AI Branding &amp; Video Studio" data-ur="AI برانڈنگ اور ویڈیو اسٹوڈیو">AI Branding &amp; Video Studio</h3>
-        <p class="fp-desc" data-en="End-to-end digital branding assets—logos, product visuals with ChatGPT/Gemini, and promo videos produced with Flow.ai." data-ur="ChatGPT، Gemini اور Flow.ai کے ذریعے لوگو، برانڈ ویژولز اور مارکیٹنگ ویڈیوز۔">End-to-end digital branding assets—logos, product visuals with ChatGPT/Gemini, and promo videos produced with Flow.ai.</p>
-      </div>
-      <div class="fp-footer">
-        <div class="fp-tags"><span class="fp-tag">Flow.ai</span><span class="fp-tag">Gemini</span><span class="fp-tag">Branding</span></div>
-        <a href="#contact" class="fp-link" title="Inquire" aria-label="Inquire about branding work">↗</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="other-list rv">
-    <div class="ol-item project-item" data-cat="python">
-      <div class="ol-head"><div class="ol-n">07</div><span class="fp-tag">Python · Matplotlib · OOP</span></div>
-      <div class="ol-title" data-en="Banking Customer Management System" data-ur="بینکنگ کسٹمر مینجمنٹ سسٹم">Banking Customer Management System</div>
-      <div class="ol-desc" data-en="Console banking application supporting deposits, withdrawals, high-value customer detection, and Matplotlib visual balance charts." data-ur="پائتھون اور Matplotlib چارٹس کے ساتھ ڈپازٹ، نکلوانے اور کسٹمر بیلنس ٹریکنگ سسٹم۔">Console banking application supporting deposits, withdrawals, high-value customer detection, and Matplotlib visual balance charts.</div>
-    </div>
-    <div class="ol-item project-item" data-cat="python">
-      <div class="ol-head"><div class="ol-n">08</div><span class="fp-tag">SQL · Database Design</span></div>
-      <div class="ol-title" data-en="School Database Management System" data-ur="اسکول ڈیٹا بیس سسٹم">School Database Management System</div>
-      <div class="ol-desc" data-en="Relational SQL system managing student records and academic data with optimized queries for storage, retrieval, and reporting." data-ur="طلباء کے ریکارڈ اور تعلیمی ڈیٹا کے انتظام اور رپورٹنگ کے لیے SQL ڈیٹا بیس سسٹم۔">Relational SQL system managing student records and academic data with optimized queries for storage, retrieval, and reporting.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="section">
-  <div class="section-tag rv" data-en="Journey" data-ur="سفر">Journey</div>
-  <h2 class="section-title rv" data-en="<em>Experience</em> &amp; Education" data-ur="<em>تجربہ</em> اور تعلیم"><em>Experience</em> &amp; Education</h2>
-  <div class="exp-list">
-    <div class="exp-item rv">
-      <div class="exp-year" data-en="Jun – Aug 2025" data-ur="جون – اگست ۲۰۲۵">Jun – Aug 2025</div>
-      <div class="exp-content">
-        <div class="exp-role" data-en="Information Systems Intern" data-ur="انفارمیشن سسٹمز انٹرن">Information Systems Intern</div>
-        <div class="exp-org" data-en="FFC-PQ (Fauji Fertilizer Company) · Karachi" data-ur="ایف ایف سی پی کیو (فوجی فرٹیلائزر کمپنی) · کراچی">FFC-PQ (Fauji Fertilizer Company) · Karachi</div>
-        <div class="exp-desc" data-en="Assisted in managing enterprise information systems and day-to-day IT operations. Supported SQL database maintenance, troubleshooting, system monitoring, data management, and technical reporting." data-ur="انٹرپرائز انفارمیشن سسٹمز، روزمرہ IT آپریشنز، SQL ڈیٹا بیس مینٹیننس، سسٹم مانیٹرنگ اور ڈیٹا رپورٹنگ میں عملی خدمات انجام دیں۔">Assisted in managing enterprise information systems and day-to-day IT operations. Supported SQL database maintenance, troubleshooting, system monitoring, data management, and technical reporting.</div>
-      </div>
-    </div>
     <div class="exp-item rv">
       <div class="exp-year" data-en="2023 – 2026" data-ur="۲۰۲۳ – ۲۰۲۶">2023 – 2026</div>
       <div class="exp-content">
